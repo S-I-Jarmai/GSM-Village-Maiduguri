@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/formCRM.css" type="text/css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">-->
+    <title>Database</title>
+</head>
+<body>
+    <div class="toggler">
+        <span id="openNav">
+            <a href="index.html" style="color: aliceblue;">Previous</a>
+            </span>
+    </div>
+<!--Start Here-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Sweet Alert JavaScript -->
+    <script src="../js/sweetalert2.js"></script>
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- Nunito Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+
+    
+  
+    <title>Profile | Firebase Auth</title>
+</head>
+<body class="bg-light">
+
+
+    <div class="container-fluid">
+        <div class="row mx-1">
+
+            
+
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 bg-white shadow my-5 border border-primary">
+                
+                <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 text-center mt-5 pb-4 text-primary">
+                    <center><h1 class="h1">GSM Village Maiduguri</h1></center>
+                </div>
+                      
+                <div class="form-group">
+
+                    <label for="membershipID">Click Load Button to Fetch Data from Database<span class="text-danger ml-1"></span></label>
+                    <br>
+                    
+                    <input type="submit" value="Load Data" onclick="readDataToDashboard()">
+                    <progress id="progress"></progress>
+                    
+                </div>
+                 
+                <hr>
+
+               
+            </div>
+        </div>
+    </div>
+
+    <table style="width:100%" id="ex-table" border="1"bgcolor="silver" >
+        <tr id="tr">
+          <th>S/No.</th>
+          <th>Surname</th>
+          <th>OtherName</th>
+          <th>D.O.B</th>
+          <th>Gender</th>
+          <th>Nationality</th>
+          <th>State</th>
+          <th>L.G.A</th>
+          <th>Address</th>
+          <th>Phone No.</th>
+          <th>Email</th>
+          <th>Grantor Name</th>
+          <th>Grantor Tel</th>
+          <th>Shop ID</th>
+          <th>Membership ID</th>
+          <th>Job Category</th>
+          <th>Number Of Staff</th>
+          <th>Rank</th>
+          <th>Status</th>
+        </tr>
+      </table>
+ 
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+   <!-- Firebase -->
+ <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDKMCdX-SuSYTyo0KcC0qe-zH-4gpYrL0I",
+    authDomain: "design-and-implement-gsm.firebaseapp.com",
+    databaseURL: "https://design-and-implement-gsm.firebaseio.com",
+    projectId: "design-and-implement-gsm",
+    storageBucket: "design-and-implement-gsm.appspot.com",
+    messagingSenderId: "116547870080",
+    appId: "1:116547870080:web:a366102baa883c1094b565"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
+<script src="./functions/database.js"></script>
+    
+
+    
+</body>
+</html>

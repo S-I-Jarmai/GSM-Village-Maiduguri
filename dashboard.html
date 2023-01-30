@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/formCRM.css" type="text/css">
+    <!--<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">-->
+    <title>Dashboard</title>
+</head>
+<body>
+    <div class="toggler">
+        <span id="openNav">
+            <a href="index.html" style="color: aliceblue;">Previous</a>
+            </span>
+    </div>
+<!--Start Here-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Sweet Alert JavaScript -->
+    <script src="../js/sweetalert2.js"></script>
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <!-- Nunito Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet">
+    <title>Profile | Firebase Auth</title>
+</head>
+<body class="bg-light">
+
+    <div class="container-fluid">
+        <div class="row mx-1">
+
+            <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 bg-white shadow my-5 border border-primary">
+                
+                <div class="col-lg-10 col-md-10 offset-lg-1 offset-md-1 text-center mt-5 pb-4 text-primary">
+                    <center><h1 class="h1">GSM Village Maiduguri</h1></center>
+                </div>
+                <div class="form-group">
+                    <label for="membershipID">Membership ID<span class="text-danger ml-1"></span></label>
+                    <br>
+                    <input type="text" class="form-controll" id="membershipIDSearch"  placeholder="Membership ID" >
+                    <input type="submit" value="Search" onclick="readDataToDashboard()" >
+                </div>
+                <hr>
+                <div id="hideForm" style="visibility: hidden;">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 p-4 bg-primary divCover">
+                        <div class="form-group">
+                            <label id="proTitle" >PERSONAL DATA:<span class="text-danger ml-1"></span></label> <br>
+                            <label for="userSurname">Surname:<span class="text-danger ml-1"></span></label>
+                            <label type="text" class="form-control" id="surname"  placeholder="Surname">
+                        </div>
+                        <div class="form-group">
+                            <label for="userOtherName">Other Name:</label>
+                            <label type="text" class="form-control" id="otherName" placeholder="Other Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="userDOB">Date of Birth:</label>
+                            <label type="date" class="form-control" id="dob" placeholder="Date of Birth">
+                        </div>
+                        <div class="form-group">
+                            <label for="userGender">Gender:<span class="text-danger ml-1"></span></label>
+                            <label type="text" class="form-control" id="gender"  placeholder="Gender">
+                        </div>
+                        <div class="form-group">
+                            <label for="userID">State of Origin:</label>
+                            <label type="text" class="form-control" id="stateOfOrigin" placeholder="State of Origin">
+                        </div>
+                        <div class="form-group">
+                            <label for="userID">L.G.A:</label>
+                            <label type="text" class="form-control" id="lga" placeholder="Local Goverment Area">
+                        </div>
+                        <div class="form-group">
+                            <label for="userFullName">Nationality:<span class="text-danger ml-1"></span></label>
+                            <label type="text" class="form-control" id="nation"  placeholder="Nationality">
+                        </div>
+                        <div class="form-group">
+                            <label for="userSurname">Resident Address:<span class="text-danger ml-1"></span></label>
+                            <label type="text" class="form-control" id="address"  placeholder="Resident Address">
+                        </div>
+                        <div class="form-group">
+                            <label for="userSurname">Phone Number: <span class="text-danger ml-1"></span></label>
+                            <label type="text" class="form-control" id="phoneNumber"  placeholder="Phone Number">
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">Email:</label>
+                            <label type="text" class="form-control" id="email" placeholder="Email">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 p-lg-5 p-md-5 px-3 py-4 text-dark">
+                        <div id="profileSection">
+                           <div id="editProfileForm">
+                            <div class="form-group">
+                                <label for="grantorName">Grantor's Name:<span class="text-danger ml-1"></span></label>
+                                <label type="text" class="form-control" id="grantorName"  placeholder="Grantor's Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="grantorTelPhone">Grantor's Tel: No.:<span class="text-danger ml-1"></span></label>
+                                <label type="text" class="form-control" id="grantorTelPhone"  placeholder="Grantor's Tel: No.">
+                            </div>
+                            <!--<div class="form-group">
+                                <label id="proTitle" >BANK DETAILS:<span class="text-danger ml-1"></span></label> <br>
+                                <div class="form-group">
+                                    <label for="userSurname">Bank Name<span class="text-danger ml-1"></span></label>
+                                    <input type="text" class="form-control" id="bankName"  placeholder="Bank Name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="userSurname">Account Number<span class="text-danger ml-1"></span></label>
+                                    <input type="text" class="form-control" id="accNo"  placeholder="Account Number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="userSurname">BVN<span class="text-danger ml-1"></span></label>
+                                    <input type="text" class="form-control" id="bvn"  placeholder="BVN">
+                                </div>
+
+                            -->
+                                <label id="proTitle" >TRADE DETAILS:<span class="text-danger ml-1"></span></label> <br>
+                               </div>
+                               <div class="form-group">
+                                <label for="userFullName">Shop ID:<span class="text-danger ml-1"></span></label>
+                                <label type="text" class="form-control" id="shopID"  placeholder="Shop ID">
+                            </div>
+                            <div class="form-group">
+                                <label for="userSurname">Membership ID:<span class="text-danger ml-1"></span></label>
+                                <label type="text" class="form-control" id="membershipID"  placeholder="Membership ID">
+                            </div>
+                            <div class="form-group">
+                                <label for="userID">Job Category:</label>
+                                <label type="text" class="form-control" id="jobCategory" placeholder="Job Category">
+                            </div>
+                            <div class="form-group">
+                                <label for="userID">Number of Staffs:</label>
+                                <label type="text" class="form-control" id="noStaff" placeholder="Number of Staffs">
+                            </div>
+                            <div class="form-group">
+                                <label for="userID">Rank:</label>
+                                <label type="text" class="form-control" id="rank" placeholder="Rank">
+                            </div>
+                            <div class="form-group">
+                                <label for="userID">Status:</label>
+                                <label type="text" class="form-control" id="status" placeholder="Status">
+                            </div>
+                            <div class="form-group"> 
+                                <label for="userID">Profile Picture:</label>
+                            <input type="file" id="cover" placeholder="Picture">
+                        </div>
+                            <button type="button" class="btn btn-outline-primary btn-block text-uppercase mb-3" onclick="consoleDate();">Submit</button>
+                        </form>
+                        <div id="progressHandler">
+                            <p>Processing the Request, please stand by...</p>
+                            <progress id="progressBar" value="" max="100"></progress>           
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            </div>
+        </div>
+    </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDKMCdX-SuSYTyo0KcC0qe-zH-4gpYrL0I",
+    authDomain: "design-and-implement-gsm.firebaseapp.com",
+    databaseURL: "https://design-and-implement-gsm.firebaseio.com",
+    projectId: "design-and-implement-gsm",
+    storageBucket: "design-and-implement-gsm.appspot.com",
+    messagingSenderId: "116547870080",
+    appId: "1:116547870080:web:a366102baa883c1094b565"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+<script src="./functions/dashboard.js"></script>
+</body>
+</html>

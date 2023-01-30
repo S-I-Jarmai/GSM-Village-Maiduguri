@@ -1,0 +1,25 @@
+body{  
+    background-color: rgb(212, 245, 243);
+    padding: 0px;
+    margin: 0px;
+    font-family: "Montserrat", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.toggler{
+    padding: 10px;
+    background-color: rgb(121, 121, 121);
+}
+#openNav{
+border: 1px solid #eee;
+padding: 10px;
+border-radius: 4px;
+color: white;
+font-weight: bold;
+background: black;
+cursor: pointer;
+}
+#proTitle{
+    font-size: 20px;
+    text-decoration: underline;
+    font-weight: bold;
+}
